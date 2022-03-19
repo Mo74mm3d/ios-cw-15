@@ -5,17 +5,29 @@ struct Student{
     var age: Int
     var grade: Double
     var attendance: Bool
+    var mentors: [String]
 }
 
-var mohammed = Student(name: "Mohammed", age: 16, grade: 100, attendance: true)
-var ahmad = Student(name: "Ahmad", age: 15, grade: 90, attendance: false)
-var hamad = Student(name: "hamad", age: 17, grade: 85, attendance: true)
+var mohammed = Student(name: "Mohammed", age: 16, grade: 100, attendance: true, mentors: [
+    "Adnan", "Bashayer", "Shaymaa", "Retaj"
+])
+var ahmad = Student(name: "Ahmad", age: 15, grade: 90, attendance: false, mentors: [
+    "Adnan", "Bashayer", "Shaymaa", "Retaj"
+])
+var hamad = Student(name: "hamad", age: 17, grade: 85, attendance: true, mentors: [
+    "Adnan", "Bashayer", "Shaymaa", "Retaj"
+])
 
 let student = [
-    Student(name: "Mohammed", age: 16, grade: 100, attendance: true),
-    Student(name: "Ahmad", age: 15, grade: 90, attendance: false),
-    Student(name: "hamad", age: 17, grade: 85, attendance: true)
+    Student(name: "Mohammed", age: 16, grade: 100, attendance: true, mentors: [
+        "Adnan", "Bashayer", "Shaymaa", "Retaj"
+    ]),
+    Student(name: "Ahmad", age: 15, grade: 90, attendance: false, mentors: [
+        "Adnan", "Bashayer", "Shaymaa", "Retaj"
+    ]),
+    Student(name: "hamad", age: 17, grade: 85, attendance: true, mentors: [
+        "Adnan", "Bashayer", "Shaymaa", "Retaj"
+    ])
 ]
 
-print(student[0].age, student[1].attendance)
-print(student[2].name)
+print("Hello my name is", student[0].name, "and I am", student[0].age, "years old.", "My mentors are", student[0].mentors[0], "," , student[0].mentors[1], "," , student[0].mentors[2], "," , student[0].mentors[3])
